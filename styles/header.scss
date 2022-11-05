@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Mono:wght@300;500&display=swap');
 
-body{
+body, button{
   font-family: 'Roboto Mono';
 }
 
 .header{
+  padding-top:20px;
   display: grid;
   .header__container {
     display: grid;
