@@ -9,7 +9,7 @@ function Hero() {
       <div className="content__container">
         <h3>It's never been so easy</h3>
         <h2>Bookscador</h2>
-        <p>Search for any book by simply typing its title or author. And the best: then you can buy it. 😎</p>
+        <p>Search for any book by simply typing its title or author. And the best part: You can buy it. 😎</p>
       </div>
       <div className="search__button">
         <button>
