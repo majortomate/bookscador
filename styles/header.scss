@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Mono:wght@300&display=swap');
+
+body{
+  font-family: 'Roboto Mono';
+}
+
+.header{
+  display: grid;
+  .header__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    align-items: center;
+
+    h1{
+      font-family: 'Poor Story';
+      font-size:50px;
+    }
+    .nav__container{
+      display:flex;
+      list-style: none;
+      grid-column-gap:50px;
+      margin:0px;
+      padding: 0px;
+      li{
+        font-size: 18px;
+        font-weight: 300;
+      }
+      @media (min-width:768px){
+        li{
+          font-size: 22px;
+          transition: all ease-in-out .35s;
+
+        &:hover{
+          font-size:21px;
+          color:rgb(43, 43, 43);
+        }
+        }
+      }
+  
+    }
+  }
+  @media (min-width:768px){
+    .header__container{
+      grid-template-columns: repeat(2, 1fr)
+    }
+  }
+}
+
