@@ -1,0 +1,53 @@
+.search__container{
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  p{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .form__container{
+    padding: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    input{
+      grid-column: span 3 / span 3;
+      padding: 10px 10px; line-height: 18px; 
+    }
+    button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 1 / span 1;
+      padding: 8px 10px; line-height: 18px; 
+      svg{
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width:768px){
+  .search__container{
+    p{
+      width:600px;
+    }
+    .form__container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 600px;
+      input{
+        grid-column: span 3 / span 3;
+      }
+      button{
+        grid-column: span 1 / span 1;
+      }
+    }
+  }
+
+}
