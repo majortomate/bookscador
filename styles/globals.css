@@ -7,6 +7,20 @@ body {
   background: rgb(222,186,122);
   background: radial-gradient(circle, rgba(222,186,122,1) 27%, rgba(222,170,80,1) 77%);
 }
+footer{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer h3{
+  font-weight: 300;
+}
+footer a{
+  font-weight: 500;
+}
 
 h1,h2,h3,h4,p{
   padding:0px;
