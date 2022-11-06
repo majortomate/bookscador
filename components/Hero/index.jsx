@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link'
 import Image from "next/image"
 function Hero() {
   return (
@@ -12,15 +13,17 @@ function Hero() {
         <p>Search for any book by simply typing its title or author. And the best part: You can buy it. 😎</p>
       </div>
       <div className="search__button">
-        <button>
-          Start Searching
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <line x1="13" y1="18" x2="19" y2="12"></line>
-          <line x1="13" y1="6" x2="19" y2="12"></line>
-        </svg>
+        <Link href='/search'>
+          <button>
+            Start Searching
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <line x1="13" y1="18" x2="19" y2="12"></line>
+            <line x1="13" y1="6" x2="19" y2="12"></line>
+          </svg>
         </button>
+        </Link>
       </div>
     </div>
   )
