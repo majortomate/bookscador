@@ -5,12 +5,12 @@ function Hero() {
   return (
     <div className="hero__container">
       <div className="gif__container">
-        <Image src="https://res.cloudinary.com/knowhere/image/upload/v1667690640/Bookscador/static/books-gif-unscreen_xvsiyu.gif" alt="books gif"  width='300' height='300'/>
+        <Image src="https://res.cloudinary.com/knowhere/image/upload/v1667690640/Bookscador/static/books-gif-unscreen_xvsiyu.gif" alt="books gif"  width='300' height='300' />
       </div>
       <div className="content__container">
         <h3>It's never been so easy</h3>
         <h2>Bookscador</h2>
-        <p>Search for any book by simply typing its title or author. And the best part: You can buy it. 😎</p>
+        <p>Search for any book by simply typing its title or author, read all its info and also buy it. 😎</p>
       </div>
       <div className="search__button">
         <Link href='/search'>

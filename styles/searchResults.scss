@@ -1,0 +1,9 @@
+.search__results{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.book__card{
+  background-color: #efbd6b;
+}
