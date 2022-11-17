@@ -3,6 +3,11 @@
   justify-content: center;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  
+  @media (min-width:768px){
+    flex-direction: row;
+  }
 }
 
 .left__column, .right__column{
@@ -21,9 +26,7 @@
     justify-content: space-between;
     flex-direction: column;
   }
-  @media (min-width:768px){
 
-  }
   .image__container {
     padding:20px 0;
   }
@@ -65,8 +68,12 @@
   }
 }
 .left__column {
-  flex: 0 0 33.333333%;
+
+  
+  @media (min-width:768px){
+    flex: 0 0 33.333333%;
   max-width: 33.333333%;
+  }
 }
 .right {
   display: flex;
