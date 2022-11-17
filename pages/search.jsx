@@ -1,22 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from 'react'
 import BookCard from '../components/BookCard'
+import GridLoader from "react-spinners/GridLoader";
 import Head from "next/head"
 function Search() {
   const [query, setQuery] = useState("")
   const [books, setBooks] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const changeHandler = (e) => {
     setQuery(e.target.value)
   }
   const submitHandler = (e) =>{
     e.preventDefault()
+    setLoading(true)
     const getData =  async () =>{
-      await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
+      await fetch(`${process.env.NEXT_PUBLIC_QUERY}${query}`)
       .then(response => response.json())
       .then(data => setBooks(data))
+      setLoading(false)
     }
     getData()
+    
   }
 
   
@@ -26,9 +31,9 @@ function Search() {
       <Head>
         <title>Bookscador - Find any book in the world</title>
       </Head>
-      <p>You can start searching any book by typing its title or even the author. It's just that simple.</p>
+      <p>You can start searching any book by typing its title. It's just that simple.</p>
       <form className="form__container">
-        <input type="search" placeholder="Type book name or author..." onChange={changeHandler} />
+        <input type="search" placeholder="Type book name..." onChange={changeHandler} />
         <button type="submit" onClick={submitHandler}>
           Search
           <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -41,12 +46,14 @@ function Search() {
     </div>
     <div className='search__results__container'>
     <div className='search__results'>
-        {books ?
+        {loading ?
+          <div className='grid__loader'><GridLoader /> </div>:
           books.items?.map(book => (
             <div key={book.id} className='book__card'>
               <BookCard book={book} />
             </div>
-          )) : null}
+          )) 
+          }
     </div>
     </div>
       </>

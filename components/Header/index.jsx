@@ -12,7 +12,7 @@ function Header () {
             <a href="https://www.linkedin.com/in/majortomate/" target='_blank' rel='noreferrer'>Meet the Author</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="https://www.linkedin.com/in/majortomate/" target='_blank' rel='noreferrer'>Contact</a>
           </li>
         </ul>
       </header>
